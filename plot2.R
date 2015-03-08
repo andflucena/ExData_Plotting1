@@ -8,5 +8,5 @@ Datetime <- strptime(paste(subSetData$Date, subSetData$Time, sep=" "), "%d/%m/%Y
 GlobalActivePower <- as.numeric(subSetData$Global_active_power)
 # Draw a new plot 
 plot(Datetime, GlobalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
-png("plot2.png", width=480, height=480)
+dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
